@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>TextRoller</title>
+  </head>
+  <body style="overflow:hidden;">
+    <center><h1 style="color:black; font-size:40px;margin-top:20px;">Welcome to <span style="color:RED;font-size:50px">TextRoller</span> </h1></center>
+    <div class="row">
+        <div class="container">
+             <form action="/analyze/" method="POST">{% csrf_token %}
+                 <div class="form-group">
+                    <label for="text" style="margin-left:280px;margin-top:10px;">Enter your Text here..</label>
+                    <textarea class="form-control" id="inputText" name="inputText" rows="6" style="height: 276px;margin-left: 270px;width: 600px;/*! align-content: center; *//*! justify-content: center; */"></textarea>
+                 </div>
+
+                 <div class="custom-control custom-switch" style="margin-left:280px;margin-top:10px;">
+                    <input type="checkbox" class="custom-control-input" id="charCount" name="charCount">
+                    <label class="custom-control-label" for="charCount">Count Character</label>
+                 </div>
+
+                 <div class="custom-control custom-switch" style="margin-left:280px;margin-top:10px;">
+                    <input type="checkbox" class="custom-control-input" id="capatalize" name="capitalize">
+                    <label class="custom-control-label" for="capatalize">Capatalize the Text</label>
+                 </div>
+
+                 <div class="custom-control custom-switch" style="margin-left:280px;margin-top:10px;">
+                    <input type="checkbox" class="custom-control-input" id="removePunc" name="removePunc">
+                    <label class="custom-control-label" for="removePunc">Remove Punctuations</label>
+                 </div>
+
+                 <div class="custom-control custom-switch" style="margin-left:280px;margin-top:10px;">
+                    <input type="checkbox" class="custom-control-input" id="extraSpaceRemove" name="extraSpaceRemove">
+                    <label class="custom-control-label" for="extraSpaceRemove">Remove Extra Space</label>
+                 </div>
+
+                 <div class="custom-control custom-switch" style="margin-left:280px;margin-top:10px;">
+                    <input type="checkbox" class="custom-control-input" id="newLineRemove" name="newLineRemove">
+                    <label class="custom-control-label" for="newLineRemove">Remove New Line</label>
+                 </div>
+
+                 <button type="submit" class="btn btn-dark mt-4" style="margin-left:280px;margin-top:6px;">Analyse Text</button>
+
+             </form>
+         </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
